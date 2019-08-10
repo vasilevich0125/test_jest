@@ -86,4 +86,4 @@ All the data sets are downloaded and kept in Schema.
 Replace the following value in above given command
 * `--db <name>` - The Database name 
 * `--collection <name>` - Collection name
-* `<path/to/file.json>` - Path of the json file (e.g., test_jest/Schema/Zips.json)
+* `<path/to/file.json>` - Path of the json file (e.g., datafiles/zips.json)
