@@ -2,10 +2,10 @@ import React from 'react';
 import cubejs from '@cubejs-client/core';
 import { QueryRenderer } from '@cubejs-client/react';
 import { Spin } from 'antd';
-import { Chart, Axis, Tooltip, Geom, Coord, Legend } from 'bizcharts';
+import { Chart, Axis, Tooltip, Geom } from 'bizcharts';
 
 const stackedChartData = (resultSet) => {
-    const data = resultSet.pivot().map(
+    return resultSet.pivot().map(
         ({ xValues, yValuesArray }) =>
             yValuesArray.map(([yValues, m]) => ({
                 x: resultSet.axisValuesString(xValues, ', '),
@@ -13,9 +13,7 @@ const stackedChartData = (resultSet) => {
                 measure: m && Number.parseFloat(m)
             }))
     ).reduce((a, b) => a.concat(b));
-
-    return data;
-}
+};
 
 const barRender = ({ resultSet }) => (
     <Chart scale={{ x: { tickCount: 8 } }} height={400} data={stackedChartData(resultSet)} forceFit>
@@ -37,7 +35,7 @@ const renderChart = (Component) => ({ resultSet, error }) => (
     (resultSet && <Component resultSet={resultSet} />) ||
     (error && error.toString()) ||
     (<Spin />)
-)
+);
 
 const ChartRenderer = () => <QueryRenderer
     query={{

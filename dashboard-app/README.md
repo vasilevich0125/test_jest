@@ -1,8 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Script to start the Cube Server
 
-## Available Scripts
+### `npm run dev`
 
-In the project directory, you can run:
+## Available Scripts for dashboard-app
+
+Change the directory using `cd dashboard-app` to run the react on you machine
+
+In the project directory, you can run following scripts:
 
 ### `npm start`
 
@@ -66,3 +70,20 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Install MongoDB and MongoDB Connector for BI
+
+Please make sure you use the MongoDB version that supports the MongoDB connector for BI.
+
+If you don’t have a local MongoDB instance please download it [here](https://www.mongodb.com/download-center/community). The BI Connector can be downloaded [here](https://www.mongodb.com/download-center/bi-connector).
+
+###Importing test dataset
+
+`bin/mongoimport --db <name> --collection zips --file <path/to/file.json>`
+
+All the data sets are downloaded and kept in Schema.
+
+Replace the following value in above given command
+* `--db <name>` - The Database name 
+* `--collection <name>` - Collection name
+* `<path/to/file.json>` - Path of the json file (e.g., test_jest/Schema/Zips.json)
