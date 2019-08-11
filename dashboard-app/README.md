@@ -79,11 +79,4 @@ If you don’t have a local MongoDB instance please download it [here](https://w
 
 ###Importing test dataset
 
-`bin/mongoimport --db <name> --collection zips --file <path/to/file.json>`
-
-All the data sets are downloaded and kept in Schema.
-
-Replace the following value in above given command
-* `--db <name>` - The Database name 
-* `--collection <name>` - Collection name
-* `<path/to/file.json>` - Path of the json file (e.g., datafiles/zips.json)
+Follow instructions from [here](https://docs.mongodb.com/bi-connector/master/local-quickstart/#import-a-sample-dataset) to import sample data.

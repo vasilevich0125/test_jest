@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import ChartRenderer from './chart/chart.js';
+import Table from './Components/Table/Table';
+import ChartRenderer from './Components/chart/chart.js';
 
 function App() {
   return (
     <div className="App">
       <ChartRenderer />
+      <Table />
     </div>
   );
 }
